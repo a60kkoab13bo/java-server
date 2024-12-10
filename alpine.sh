@@ -180,6 +180,6 @@ EOF
 
 # This command starts PRoot and binds several important directories
 # from the host file system to our special root file system.
-$ROOTFS_DIR/usr/bin/proot.static -S "${ROOTFS_DIR}" -w / supervisord -c /etc/supervisor/conf.d/supervisord.conf &
-$ROOTFS_DIR/usr/bin/proot.static -S "${ROOTFS_DIR}" -w / /bin/ash -c "sleep 5s && $(cat tor.sh)"
+#$ROOTFS_DIR/usr/bin/proot.static -S "${ROOTFS_DIR}" -w / supervisord -c /etc/supervisor/conf.d/supervisord.conf &
+#$ROOTFS_DIR/usr/bin/proot.static -S "${ROOTFS_DIR}" -w / /bin/ash -c "sleep 5s && $(cat tor.sh)"
 $ROOTFS_DIR/usr/bin/proot.static -S "${ROOTFS_DIR}" -w / /bin/ash
